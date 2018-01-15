@@ -43,5 +43,49 @@ html, body {
 }
 
 .view-content {
-  
+  position: absolute;
+  top: 48px;
+  bottom: 35px;
+  width: 100%;
+  overflow-y: auto;
 }
+
+.view-footer {
+  position: absolute;
+  background: #e71348;
+  bottom: 0;
+  height: 35px;
+  width: 100%;
+}
+
+.view-footer-textbox {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 100px;
+  bottom: 3px;
+}
+
+.view-footer.textbox input {
+  -webkit-appearance: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 3px 8px;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "SegoeUI", sans-serif;
+  border-radius: 4px;
+}
+
+.view-footer-submit {
+  font-size: 16px;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  text-align: center;
+  line-height: 35px;
+  color: #FFF;
+}
+
