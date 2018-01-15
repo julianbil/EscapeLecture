@@ -8,7 +8,7 @@ html, body {
 }
 
 .view {
-  
+
 }
 
 .view-topbar {
@@ -68,6 +68,7 @@ html, body {
   border-width: 0.5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
+  position: relative;
 }
 
 .vciitem-title {
@@ -82,7 +83,7 @@ html, body {
   color: #555;
 }
 
-.vciitem-sperator {
+.vciitem-seperator {
   width: 100%;
   height: 1px;
   border-bottom: 1px dashed #CCC;
@@ -90,13 +91,52 @@ html, body {
 
 .vciitem-personen {
   display: inline-block;
-  padding: 6px 80px 6px 12px;
+  padding: 6px 110px 6px 12px;
   font-size: 14px;
 }
 
 .vciitem-state {
   position: absolute;
+  font-size: 14px;
+  padding: 6px 12px;
+  right: 0px;
+  max-width: calc(110px - 24px);
+  display: inline-block;
 }
+
+.vciitem-answer {
+
+}
+
+.vciitem-answer-tag {
+  font-size: 12px;
+  padding: 3px 12px;
+  color: #555;
+}
+
+.vciitem-answer-text {
+  padding: 6px 12px;
+  font-size: 18px;
+}
+
+.vciitem-answer-score {
+  padding: 0px 12px 6px;
+}
+
+.vciitem-answer-noanswer {
+font-style: italic;
+text-align: center;
+padding: 8px;
+color: #555;
+}
+
+
+.vciitem-command {
+  text-align: center;
+  padding: 6px;
+  font-size: 16px;
+}
+
 
 .view-footer {
   position: absolute;
@@ -137,4 +177,3 @@ html, body {
   color: #FFF;
   cursor: pointer;
 }
-
