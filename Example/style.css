@@ -70,6 +70,18 @@ html, body {
   border-radius: 2px;
 }
 
+.vciitem-title {
+  padding: 12px;
+  font-size: 18px;
+}
+
+.vciitem-time {
+  text-align: right;
+  font-size: 12px;
+  padding: 3px 12px;
+  color: #555;
+}
+
 .view-footer {
   position: absolute;
   background: #e71348;
