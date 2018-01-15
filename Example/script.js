@@ -22,3 +22,15 @@ function get(name) {
 // http updates with a fixed interval (ms)
 function update() { get("mytext"); }
 var intervalID = setInterval(update, 1000);
+
+function put(id, doc) {
+    http.open("PUT", dburl + id, false);
+    http.setRequestHeader("Content-type", "application/json");
+    var docAsString = JSON.stringify(doc);
+    http.send(docAsString);
+}
+
+function main_footer_submit(){
+  var question = document.getElementById("question-text").value;
+  put("question", {'_id':'question1','value':question})
+}
