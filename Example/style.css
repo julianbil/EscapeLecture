@@ -88,6 +88,16 @@ html, body {
   border-bottom: 1px dashed #CCC;
 }
 
+.vciitem-personen {
+  display: inline-block;
+  padding: 6px 80px 6px 12px;
+  font-size: 14px;
+}
+
+.vciitem-state {
+  position: absolute;
+}
+
 .view-footer {
   position: absolute;
   background: #e71348;
