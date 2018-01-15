@@ -20,8 +20,8 @@ function get(name) {
 }
 
 // http updates with a fixed interval (ms)
-function update() { get("mytext"); }
-var intervalID = setInterval(update, 1000);
+//function update() { get("mytext"); }
+//var intervalID = setInterval(update, 1000);
 
 function put(id, doc) {
     http.open("PUT", dburl + id, false);
@@ -32,5 +32,5 @@ function put(id, doc) {
 
 function main_footer_submit(){
   var question = document.getElementById("question-text").value;
-  put("question", {'_id':'question1','value':question})
+  put("question", {'_id':'question','value':question, "_rev": "1-967a00dff5e02add41819138abb3284d"})
 }
