@@ -75,7 +75,7 @@ function main_footer_submit(){
   try{
      put("question", {'_id':'question','value':question, "_rev": "1-967a00dff5e02add41819138abb3284d"}) 
   } catch (e) {
-    console.warn("error: " + e.getMessage());  
+    console.warn("error: " + e.message);  
   }
     
   fakeQuestion(question);
