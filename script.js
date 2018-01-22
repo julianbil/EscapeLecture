@@ -74,7 +74,7 @@ function main_footer_submit(){
   var question = document.getElementById("question-text").value;
   try{
      put("question", {'_id':'question','value':question, "_rev": "1-967a00dff5e02add41819138abb3284d"}) 
-  } catch (Error e) {
+  } catch (e) {
     console.warn("error: " + e.getMessage());  
   }
     
