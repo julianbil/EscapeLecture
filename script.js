@@ -72,7 +72,12 @@ function main_add_question(question){
 
 function main_footer_submit(){
   var question = document.getElementById("question-text").value;
-  put("question", {'_id':'question','value':question, "_rev": "1-967a00dff5e02add41819138abb3284d"})
+  try{
+     put("question", {'_id':'question','value':question, "_rev": "1-967a00dff5e02add41819138abb3284d"}) 
+  } catch (Error e) {
+    console.warn("error: " + e.getMessage());  
+  }
+    
   fakeQuestion(question);
   document.getElementById("question-text").value = "";
 }
