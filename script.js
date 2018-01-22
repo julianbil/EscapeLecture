@@ -47,7 +47,7 @@ function checkTime(i) {
   var question = {
     title: qst,
     time: time,
-    personen: 4,
+    personen: 0,
     state: "Offen"
   };
   main_add_question(question);
@@ -58,7 +58,7 @@ function main_add_question(question){
 <div id="" class="vciitem-title">' + question.title + '</div>\
     <div class="vciitem-time">' + question.time + '</div>\
     <div class="vciitem-seperator"></div>\
-    <div class="vciitem-personen">' + question.personen + ' Personen fragen sich das auch</div>\
+    <div class="vciitem-personen" onclick="upquestion(this)">' + question.personen + ' Personen fragen sich das auch</div>\
     <div class="vciitem-state">' + question.state + '</div>\
     <div class="vciitem-seperator"></div>\
     <div class="vciitem-answer">\
@@ -68,6 +68,20 @@ function main_add_question(question){
     <div class="vciitem-command">Auf Frage antworten</div>\
   </div>';
     document.getElementsByClassName("view-content-items")[0].innerHTML += html;
+}
+
+function upquestion(el) {
+    var text = el.innerHTML;
+    var number = text.match(/\d+/)[0];
+    number++;
+    el.innerHTML = number + ' Personen fragen sich das auch';
+}
+
+function upvote(el) {
+    var text = el.innerHTML;
+    var number = text.match(/\d+/)[0];
+    number++;
+    el.innerHTML = "+" + number + ' Score';
 }
 
 function main_footer_submit(){
